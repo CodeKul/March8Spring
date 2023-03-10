@@ -1,5 +1,6 @@
 package com.example.March8Spring;
 
+import com.example.March8Spring.di.Student;
 import com.example.March8Spring.ioc.Jio;
 import com.example.March8Spring.ioc.SimConfig;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +17,8 @@ public class March8SpringApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext context =  SpringApplication.run(March8SpringApplication.class, args);
 
+        Student st = context.getBean(Student.class);
+        st.callSubject();
 //        Jio jio = context.getBean(Jio.class);
 //        jio.calling();
 //        jio.msg();
