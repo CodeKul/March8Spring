@@ -15,10 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class March8SpringApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context =  SpringApplication.run(March8SpringApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(March8SpringApplication.class, args);
 
         Student st = context.getBean(Student.class);
         st.callSubject();
+
+        Student st1 = context.getBean(Student.class);
+        st1.callSubject();
+
 //        Jio jio = context.getBean(Jio.class);
 //        jio.calling();
 //        jio.msg();
